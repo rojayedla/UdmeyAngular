@@ -1,0 +1,16 @@
+<p>
+  custom-setup works!
+</p>
+
+<div>
+    <div (click)="toggleShowConfig()">
+      <span>Set Rules</span>
+    </div>
+    <div >
+      <button *ngIf="showConfigDev" (click)="closeConfigRuleBar()">X</button>
+    </div>
+    <div *ngFor="let card of setRuleCard" (click)="setRuleEvent($event, card.name)">
+      <a name="card.icon"></a>
+      <button> {{card.name}}</button>
+    </div>
+</div>

@@ -4,10 +4,13 @@
     Welcome to {{ title }}!
   </h1>
  </div>
-  <div>
-    
-      <app-home></app-home>
- 
-  </div>
+ <div>
+  <h1>Angular Router</h1>
+  <nav>
+    <a routerLink="/enquiry" routerLinkActive="active" style="margin-right: 20px;">Crisis Center</a>
+    <a routerLink="/fileprep" routerLinkActive="active">Heroes</a>
+  </nav>
+  <router-outlet></router-outlet>
+ </div>
 
-<router-outlet></router-outlet>
+ 

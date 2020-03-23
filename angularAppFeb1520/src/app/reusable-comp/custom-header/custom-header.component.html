@@ -1,0 +1,17 @@
+
+<div *ngIf="filePath !== ''" > 
+  <div class="row" style="display:flex">
+    <div>
+      <button class="row" (click)="readSelectionEvent($event)">Read Selection</button>
+    </div>     
+     <div style="margin-left: 30px; margin-bottom: 30px" >
+       <mat-form-field>
+         <input matInput placeholder="file name" [value]="fileName" disabled>
+       </mat-form-field>
+     </div>
+     <div>
+      <button class="row" (click)="closeFile($event)">X</button>
+    </div> 
+  </div>
+
+</div>

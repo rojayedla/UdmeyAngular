@@ -1,0 +1,96 @@
+<p>
+  enquiry works!
+</p>
+<div>
+  <form  [formGroup]="enquiryForm">
+    <mat-form-field  >
+      <mat-label>Common Name</mat-label>
+      <input matInput formControlName="commonName">
+    </mat-form-field>
+    <mat-form-field  >
+      <mat-label>ISI NO</mat-label>
+      <input matInput formControlName="isino">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label></mat-label>
+      <mat-select formControlName="currency">
+        <mat-option *ngFor="let e of currencyCodes" [value]="e.code">
+          {{e.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label></mat-label>
+      <mat-select formControlName="subscripAssets">
+        <mat-option *ngFor="let e of assetCode" [value]="e.code">
+          {{e.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label></mat-label>
+      <mat-select formControlName="disributionType">
+        <mat-option *ngFor="let e of fdistypeCode" [value]="e.code">
+          {{e.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <button mat-button (click)="search()">Search</button>
+    </div>
+  </form>
+</div>
+
+
+<div>
+  <div>
+    <button [disabled]="!dataSource.data?.length" (click)="exportFile()">Export Excel</button>
+  </div>
+  <div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+   
+    
+      <!-- Position isno -->
+      <ng-container matColumnDef="isno">
+        <th mat-header-cell *matHeaderCellDef> ISINo. </th>
+        <td mat-cell *matCellDef="let element"> {{element.isno}} </td>
+      </ng-container>
+    
+      <!-- commonName Column -->
+      <ng-container matColumnDef="commonName">
+        <th mat-header-cell *matHeaderCellDef> Common Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.commonName}} </td>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="denominationCurrency">
+        <th mat-header-cell *matHeaderCellDef> Currency </th>
+        <td mat-cell *matCellDef="let element"> {{element.denominationCurrency}} </td>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="disributionType">
+        <th mat-header-cell *matHeaderCellDef> Disribution Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.disributionType}} </td>
+      </ng-container>
+      <ng-container matColumnDef="subAsset">
+        <th mat-header-cell *matHeaderCellDef> SubAsset Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.subAsset}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; "></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div *ngIf="!searchNotFound && dataSource.data?.length === 0">
+      <h3>No Dats</h3>
+    </div>
+    <div *ngIf="searchNotFound">
+      <h3>No Maches found please try another search</h3>
+    </div>
+  </div>
+  <mat-paginator [length]="resultsLength"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+</div>
+
+ 

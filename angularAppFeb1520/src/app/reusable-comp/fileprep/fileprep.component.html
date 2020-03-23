@@ -1,0 +1,31 @@
+ 
+<!-- <app-excel-data></app-excel-data> -->
+
+<div *ngIf="filePath === ''" class="drop-zone"> 
+  <div class="row">
+    <div class="col-12">
+      <div class="fileContainer upload-block">
+        <span>
+            Drag and drop of
+            <a>Browse</a> file here to upload
+        </span>
+        <input type="file" (change)="onFileSelected($event)" id="file"/>
+      </div>
+      <div class="upload-buttons float-right">
+        <button class="btn btn-light">
+            Cancel
+        </button>
+        <label>Upload
+        <input type="file" (change)="onFileSelected($event)" id="file"/>
+      </label>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+<div *ngIf="filePath !== '' && fileExtemsion === 'xlsx'">
+  <app-excel-data [fileName]="fileName" 
+  [filePath]="filePath" [pdfFile]="pdfFile"
+  (closeFile)="closePdf()">  </app-excel-data>
+</div>
