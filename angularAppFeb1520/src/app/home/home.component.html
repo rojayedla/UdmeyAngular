@@ -1,2 +1,45 @@
-  
- <h3>Home component</h3>
+ 
+ 
+ 
+<div class="container">  
+ 
+    
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/enquiry" routerLinkActive="active" style="margin-right: 20px;">Server
+                Pagination</a></li>
+            <li><a routerLink="/fileprep" routerLinkActive="active" style="margin-right: 20px;">File prep</a></li>
+            <!-- <li><a routerLink="/employee" routerLinkActive="active">Kud Cured</a></li> -->
+          </ul>
+        </li> 
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">KUD CURD
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/employee/list" routerLinkActive="active">Employee</a></li>
+              <li><a routerLink="/employee/create"  routerLinkActive="active" style="margin-right: 20px;">Template Driven Forms</a></li>
+              <li><a routerLink="/employee/tempref"  routerLinkActive="active" style="margin-right: 20px;">Template Reference</a></li>
+
+              <li><a   routerLinkActive="active">Kud Cured</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Udemy
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/udemy/reusable" routerLinkActive="active">Reusable</a></li>
+              <!-- <li><a routerLink="/employee/create"  routerLinkActive="active" style="margin-right: 20px;">Template Driven Forms</a></li>
+              <li><a   routerLinkActive="active">Kud Cured</a></li> -->
+            </ul>
+          </li>
+        <li><a href="#">Menu 3</a></li>
+      </ul>
+   
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+  </div>

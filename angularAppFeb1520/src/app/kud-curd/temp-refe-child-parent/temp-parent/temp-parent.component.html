@@ -1,0 +1,12 @@
+<p>
+  temp-parent works!
+</p>
+ <!-- pass the data from child to parent using template reference varialble  -->
+ <h3 #h1Variable>template</h3>
+
+<div  *ngFor="let employee of employees">
+  <div (click)="h1Variable.innerHTML = childComponent.getNameAndGender()">
+
+  <app-display-employee [employee]="employee"  #childComponent ></app-display-employee>
+  </div>
+</div>
