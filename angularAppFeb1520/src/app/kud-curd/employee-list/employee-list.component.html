@@ -1,9 +1,14 @@
 
 <!--pass the data from child to parent using @output () property-->
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Search By Name"
+          style="width:300px" [(ngModel)]="searchTerm" />
+</div>
+
 <h3 *ngIf="dataFromChild">
   {{ dataFromChild?.name + ' ' + dataFromChild?.gender }}
 </h3>
-<div  *ngFor="let employee of employees">
+<div  *ngFor="let employee of employees  | employeeFilter:searchTerm">
   <div  (click)="onClick(employee.id)" class="pointerCursor">
   <app-display-employee [employee]="employee"  ></app-display-employee>
 </div>

@@ -12,8 +12,9 @@ import { ConfirmEqualValidatorDirective } from './confirm-equal-validator.direct
 import { DisplayEmployeeComponent } from './display-employee/display-employee.component';
 import { TempParentComponent } from './temp-refe-child-parent/temp-parent/temp-parent.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeFilterPipe } from './employee-filter.pipe';
 @NgModule({
-  declarations: [EmployeeListComponent, CreateEmployeeComponent, SelectRequiredValidatorDirective, ConfirmEqualValidatorDirective, DisplayEmployeeComponent, TempParentComponent, EmployeeDetailsComponent],
+  declarations: [EmployeeListComponent, CreateEmployeeComponent, SelectRequiredValidatorDirective, ConfirmEqualValidatorDirective, DisplayEmployeeComponent, TempParentComponent, EmployeeDetailsComponent, EmployeeFilterPipe],
   imports: [
     CommonModule,
     FormsModule,

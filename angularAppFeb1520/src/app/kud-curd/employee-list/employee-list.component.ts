@@ -13,6 +13,8 @@ export class EmployeeListComponent implements OnInit {
   dataFromChild: Employee;  
  // employeeToDisplay: Employee;
   private arrayIndex = 1;
+
+  searchTerm: string;
   constructor(private _employeeService: EmployeeService,
     private _router: Router,  private _aroute: ActivatedRoute) { }
 
