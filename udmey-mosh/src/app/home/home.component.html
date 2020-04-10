@@ -14,10 +14,10 @@
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Dropdown link
+       Section-8
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" [routerLink]="['signup']" >SignUp Form</a>
         <a class="dropdown-item" href="#">Link 2</a>
         <a class="dropdown-item" href="#">Link 3</a>
       </div>
@@ -26,12 +26,9 @@
 </nav>
 <br>
   
-<div class="container">
-  <h3>Navbar With Dropdown</h3>
-  <p>This example adds a dropdown menu in the navbar.</p>
-</div>
 
 
-  <div>
+
+  <div class="container">
       <router-outlet></router-outlet>
   </div>
