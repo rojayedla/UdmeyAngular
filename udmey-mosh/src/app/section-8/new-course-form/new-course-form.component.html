@@ -1,0 +1,21 @@
+<p>
+  new-course-form works!  FormArray example
+</p>
+<form [formGroup]='form'>
+  <input type="text" class="form-control" formControlName="name">
+  <div  formGroupName="contact">
+    <input type="text" class="form-control"  formControlName="email" >
+    <input type="text" class="form-control"  formControlName="phone" >
+
+  </div>
+  
+
+    <input type="text" class="form-control"  (keyup.enter)="addTopic(topic)" #topic>  
+    <div> 
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let topic of topics.controls" >{{topic.value}} 
+          <button type="button" (click)="removeTopic(topic)">X</button>
+        </li>
+      </ul>
+  </div>
+</form>

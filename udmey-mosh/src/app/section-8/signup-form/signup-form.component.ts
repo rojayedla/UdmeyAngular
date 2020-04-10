@@ -16,7 +16,7 @@ export class SignupFormComponent implements OnInit {
     // ]),
     username: new FormControl('', Validators.required,  UsernameValidators.shoudBeUnique),
     password : new FormControl('', Validators.required)
-  });
+  }); 
 
   get username() {
     return this.form.get('username');
