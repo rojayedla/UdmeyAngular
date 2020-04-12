@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SignupFormComponent } from './section-8/signup-form/signup-form.component';
 import { NewCourseFormComponent } from './section-8/new-course-form/new-course-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PostsComponent } from './section-9/posts/posts.component';
+import { AppErrorHandler } from './common/app-error-handler';
+import { UsersComponent } from './section-9/users/users.component';
 
 
 @NgModule({
@@ -13,15 +17,21 @@ import { NewCourseFormComponent } from './section-8/new-course-form/new-course-f
     AppComponent,
     HomeComponent,
     SignupFormComponent,
-    NewCourseFormComponent
+    NewCourseFormComponent,
+    PostsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    // Global error handling
+    {provide: ErrorHandler, useClass: AppErrorHandler}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,11 @@
+<p>
+  users works!
+</p>
+<input type="text" (keyup.enter)="createUser(name)" class="form-control" #name>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let user of users" >{{user.name}} --- {{user.email}}
+    <button (click)="updateUser(user)" class="btn btn-primary">update</button>
+    <button (click)="deleteUser(user)" class="btn btn-primary">Delete</button>
+
+  </li>
+</ul>
