@@ -10,6 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostsComponent } from './section-9/posts/posts.component';
 import { AppErrorHandler } from './common/app-error-handler';
 import { UsersComponent } from './section-9/users/users.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { PostComponent } from './section-9/post/post.component'; 
+import { FollowersComponent } from './section-10-routing/followers/followers.component';
+import { FollowerComponent } from './section-10-routing/follower/follower.component';
 
 
 @NgModule({
@@ -19,18 +23,23 @@ import { UsersComponent } from './section-9/users/users.component';
     SignupFormComponent,
     NewCourseFormComponent,
     PostsComponent,
-    UsersComponent
+    UsersComponent,
+    NotFoundComponent,
+    PostComponent,
+    FollowersComponent,
+    FollowerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [
     // Global error handling
-    {provide: ErrorHandler, useClass: AppErrorHandler}
+    // {provide: ErrorHandler, useClass: AppErrorHandler}
   ],
   bootstrap: [AppComponent]
 })

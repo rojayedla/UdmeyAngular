@@ -27,16 +27,34 @@
        Section-9
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" [routerLink]="['posts']" >posts</a>
-        <a class="dropdown-item" [routerLink]="['reusableservice']">Reusable Data Service</a>
-        <a class="dropdown-item" href="#">Link 3</a>
+        <a class="dropdown-item" routerLinkActive="active current" [routerLink]="['posts']" >posts</a>
+        <a class="dropdown-item" routerLinkActive="active current" [routerLink]="['reusableservice']">Reusable Data Service</a>
+        <a class="dropdown-item" routerLinkActive="active current" href="#">Link 3</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle"   id="navbardrop" data-toggle="dropdown">
+       Section-10 Routing
+      </a>
+      <div class="dropdown-menu" >
+        <a class="dropdown-item" [routerLink]="['/followers']" [queryParams]="{page:1, order:'newest'}" >Follower</a>
+         <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle"   id="navbardrop" data-toggle="dropdown">
+       Section-10
+      </a>
+      <div class="dropdown-menu" >
+        <a class="dropdown-item" [routerLink]="['/sec10/followers']" >Follower</a>
+         <a class="dropdown-item" href="#">Link 3</a>
       </div>
     </li>
   </ul>
 </nav>
 <br>
   
-
+ 
 
 
   <div class="container">
