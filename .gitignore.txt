@@ -1,3 +1,2 @@
 angularAppFeb1520/node_modules
 udmey-mosh/node_modules
-udmey-meanstack/node_modules
