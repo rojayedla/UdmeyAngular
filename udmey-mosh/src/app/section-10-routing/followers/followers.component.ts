@@ -13,7 +13,7 @@ export class FollowersComponent implements OnInit {
   constructor(private followersService: FollowersService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // this.route.snapshot.paramMap.get('id');
+  
     this.route.paramMap.subscribe(params => {
 
     });

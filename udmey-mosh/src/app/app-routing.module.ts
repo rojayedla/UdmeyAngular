@@ -23,6 +23,11 @@ const routes: Routes = [
     data: { preload: true }
   },
   {
+    path: 'auth',
+    loadChildren: './authentication/authentication.module#AuthenticationModule',
+    data: { preload: true }
+  },
+  {
     path: '**', component: NotFoundComponent
   }
 

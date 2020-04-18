@@ -14,7 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PostComponent } from './section-9/post/post.component'; 
 import { FollowersComponent } from './section-10-routing/followers/followers.component';
 import { FollowerComponent } from './section-10-routing/follower/follower.component';
-
+ 
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { FollowerComponent } from './section-10-routing/follower/follower.compon
     NotFoundComponent,
     PostComponent,
     FollowersComponent,
-    FollowerComponent
+    FollowerComponent,
   ],
   imports: [
     BrowserModule,
