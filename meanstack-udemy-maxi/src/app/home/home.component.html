@@ -1,0 +1,7 @@
+
+<mat-toolbar color="primary">Message</mat-toolbar>
+<button mat-button [matMenuTriggerFor]="menu">Section-2</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [routerLink]="['myexample']">Self Example</button>
+  <button mat-menu-item [routerLink]="['maxiexample']">Tut-Example</button>
+</mat-menu>
