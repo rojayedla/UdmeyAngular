@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatInputModule, MatButtonModule, MatCardModule, MatToolbarModule, MatExpansionModule, MatMenuModule
+import {MatInputModule, MatButtonModule, MatCardModule, MatToolbarModule, MatExpansionModule, MatMenuModule, MatProgressSpinnerModule
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
@@ -39,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatButtonModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [],

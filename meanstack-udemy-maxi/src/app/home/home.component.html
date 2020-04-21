@@ -1,7 +1,13 @@
 
-<mat-toolbar color="primary">Message</mat-toolbar>
-<button mat-button [matMenuTriggerFor]="menu">Section-2</button>
+<mat-toolbar color="primary">
+<span><a routerLink="/">MyMessages</a></span>
+<ul>
+  <li ><a mat-button [routerLink]="['/create']" routerLinkActive="mat-accent">New Post</a></li>
+</ul>
+</mat-toolbar>
+
+<!-- <button mat-button [matMenuTriggerFor]="menu">Section-2</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item [routerLink]="['myexample']">Self Example</button>
-  <button mat-menu-item [routerLink]="['maxiexample']">Tut-Example</button>
-</mat-menu>
+  <button mat-menu-item [routerLink]="['create']">Tut-Example</button>
+</mat-menu> -->
