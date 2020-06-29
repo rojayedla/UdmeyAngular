@@ -15,7 +15,10 @@ import { MyExampleComponent } from './section-2/my-example/my-example.component'
 import { MaxiExampleComponent } from './section-2/max-example/maxi-example/maxi-example.component';
 import { MpostCreateComponent } from './section-2/max-example/maxi-example/mpost-create/mpost-create.component';
 import { MpostListComponent } from './section-2/max-example/maxi-example/mpost-list/mpost-list.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoginComponent } from './auth-section8/login/login.component';
+import { SignupComponent } from './auth-section8/signup/signup.component';
+import { AuthInterceptor } from './auth-section8/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     MyExampleComponent,
     MaxiExampleComponent,
     MpostCreateComponent,
-    MpostListComponent
+    MpostListComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatProgressSpinnerModule
 
   ],
-  providers: [],
+  providers: [
+    
+   {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
