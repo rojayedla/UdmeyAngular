@@ -1,1 +1,5 @@
 angularAppFeb1520/node_modules
+udmey-mosh/node_modules
+meanstack-udemy-maxi/node_modules
+
+ 
