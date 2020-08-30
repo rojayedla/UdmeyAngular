@@ -31,13 +31,24 @@ export class EnquiryComponent implements OnInit {
       subscripAssets: '',
       disributionType: ''
 
+    });
+    
+    this.enquiryService.getEnquiryData({}).subscribe(data => {
+      this.resultsLength = data.total;
+      console.log(this.resultsLength)
+      if(data.result.length > 0) {
+        this.dataSource.data = data.result;
+      } else {
+        this.searchNotFound = true;
+      }
     })
+    
    }
 
 
   ngOnInit() {
   }
-
+/*
   exportFile(): void {
     const header: Map<string, string> = new Map([
      ['isno', 'ISNO'],
@@ -63,23 +74,27 @@ export class EnquiryComponent implements OnInit {
       link.click();
     })
   }
-
+*/
   search() {
     if(!this.enquiryForm.value.isino.trim() && !this.enquiryForm.value.commonName.trim()) {
       alert('OOPS Mandatory field is not filled out.');
     } else {
       this.clearData();
       this.requestBody = {
-        filterCriteria: this.formRequest(this.enquiryForm.value),
+        filterCriteria:  this.enquiryForm.value,
         page: {
-          index: 0,
+          index: 1,
           size: 10
           //size: this.paginator.pageSize
         }
       }
+
       this.enquiryService.getEnquiryData(this.requestBody).subscribe(data => {
+        
         this.resultsLength = data.total;
+        console.log(this.resultsLength);
         if(data.result.length > 0) {
+          
           this.dataSource.data = data.result;
         } else {
           this.searchNotFound = true;

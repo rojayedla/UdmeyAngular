@@ -18,6 +18,11 @@ const routes: Routes = [
     path: 'udemy',
     loadChildren: './udemy/udemy.module#UdemyModule',
     data: { preload: true }
+  },
+  {
+    path: 'mock',
+    loadChildren: './mock-example/mock-example.module#MockExampleModule',
+    data: { preload: true }
   }
 ];
 

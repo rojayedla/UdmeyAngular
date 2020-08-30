@@ -1,0 +1,20 @@
+<p>
+  multi-search2 works!
+</p>
+<app-search (groupFilters)="filters = $event"
+ ></app-search>
+
+<br/>
+
+<app-user-list [groupFilters]="filters"
+   [searchByKeyword]="searchText"></app-user-list>  
+ 
+
+<!-- 
+<app-search (groupFilters)="filters = $event"
+(autoSearch)="searchText = $event"></app-search>
+
+<br/>
+
+<app-user-list [groupFilters]="filters"
+   [searchByKeyword]="searchText"></app-user-list>   -->

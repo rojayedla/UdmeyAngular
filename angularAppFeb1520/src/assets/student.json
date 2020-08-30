@@ -1,0 +1,98 @@
+[
+  
+    {
+        "StudentId": 1,
+        "StudentName": "Student1",
+        "Sex":"M",
+        "Programs": [
+            {
+                "StudentId": 1,
+                "ProgramName": "Java",
+                "ProgramCategory": "Engineering",
+                "ProgramStatus": "Full Time"
+            },
+            {
+                "StudentId": 1,
+                "ProgramName": "HR Management 2",
+                "ProgramCategory": "HR",
+                "ProgramStatus": "Part Time"
+            },
+            {
+                "StudentId": 1,
+                "ProgramName": "Accounting 1",
+                "ProgramCategory": "Finance",
+                "ProgramStatus": "Full Time"
+            }
+        ]
+     },
+    {
+        "StudentId": 2,
+        "StudentName": "Student2",
+        "Sex":"F",
+        "Programs": [
+            {
+                "StudentId": 2,
+                "ProgramName": "HR Management 1",
+                "ProgramCategory": "HR",
+                "ProgramStatus": "Part Time"
+            },
+            {
+                "StudentId": 2,
+                "ProgramName": "Accounting 3",
+                "ProgramCategory": "Finance",
+                "ProgramStatus": "Full Time"
+            }
+        ]
+     },
+    {
+        "StudentId": 3,
+        "StudentName": "Student3",
+        "Sex":"F",
+        "Programs": [
+            {
+                "StudentId": 3,
+                "ProgramName": "Java 3",
+                "ProgramCategory": "Engineering",
+                "ProgramStatus": "Full Time"
+            }
+        ]
+     },
+    {
+        "StudentId": 4,
+        "StudentName": "Student4",
+        "Sex":"M",
+        "Programs": [
+            {
+                "StudentId": 4,
+                "ProgramName": "Java 2",
+                "ProgramCategory": "Engineering",
+                "ProgramStatus": "Full Time"
+            },
+            {
+                "StudentId": 4,
+                "ProgramName": "Accounting 2",
+                "ProgramCategory": "Finance",
+                "ProgramStatus": "Part Time"
+            }
+        ]
+     },
+     {
+        "StudentId": 5,
+        "StudentName": "Student5",
+        "Sex":"M",
+        "Programs": [
+            {
+                "StudentId": 5,
+                "ProgramName": "JavaScript",
+                "ProgramCategory": "Engineering",
+                "ProgramStatus": "Part Time"
+            },
+            {
+                "StudentId": 5,
+                "ProgramName": "HR Management 5",
+                "ProgramCategory": "HR",
+                "ProgramStatus": "Full Time"
+            }
+        ]
+     }
+]

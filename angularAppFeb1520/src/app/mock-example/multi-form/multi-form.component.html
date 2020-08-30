@@ -1,0 +1,20 @@
+<h1>
+
+</h1>
+<div>
+  <form [formGroup]="myForm" (ngSubmit)="formSubmit()">
+  <div>
+    <label>Name: </label>
+    <input formControlName="name" />
+  </div>
+  <div>
+    <h3>child form1</h3>
+    <app-address-child1 [address]="myForm.controls.address"></app-address-child1>
+  </div>
+  <div>
+    <h3>child form2</h3>
+    <app-education-child2 [education]="myForm.controls.education"></app-education-child2>
+  </div>
+  <button type="submit">Submit</button>
+  </form>
+</div>

@@ -13,7 +13,7 @@ import { FileprepComponent } from './reusable-comp/fileprep/fileprep.component';
 import { ExcelDataComponent } from './reusable-comp/excel-data/excel-data.component';
 import { CustomHeaderComponent } from './reusable-comp/custom-header/custom-header.component';
 import { CustomSetupComponent } from './reusable-comp/custom-setup/custom-setup.component';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     FileprepComponent,
     ExcelDataComponent,
     CustomHeaderComponent,
-    CustomSetupComponent
+    CustomSetupComponent 
   ],
   imports: [
     BrowserModule,

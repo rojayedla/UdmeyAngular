@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExcelDataComponent } from './excel-data.component';
+import { MultiSearch2Component } from './multi-search2.component';
 
-describe('ExcelDataComponent', () => {
-  let component: ExcelDataComponent;
-  let fixture: ComponentFixture<ExcelDataComponent>;
+describe('MultiSearch2Component', () => {
+  let component: MultiSearch2Component;
+  let fixture: ComponentFixture<MultiSearch2Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExcelDataComponent ]
+      declarations: [ MultiSearch2Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExcelDataComponent);
+    fixture = TestBed.createComponent(MultiSearch2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

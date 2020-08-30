@@ -19,7 +19,10 @@ export class EmployeeListComponent implements OnInit {
     private _router: Router,  private _aroute: ActivatedRoute) { }
 
   ngOnInit() {
-   this.employees = this._employeeService.getEmployees();
+  // this._employeeService.getEmployees().subscribe( empList => {
+  //   this.employees = empList;
+  //  });
+   
    const id = +this._aroute.snapshot.paramMap.get('id');
   }
  //  this.employeeToDisplay = this.employees[0];

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Employee } from './employee';
-
-@Injectable({
+import { Observable } from 'rxjs';
+ 
+ @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
@@ -46,7 +47,9 @@ export class EmployeeService {
   getEmployees(): Employee[] {
     return this.listEmployees;
   }
-
+  // getEmployees(): Observable<Employee[]> {
+  //   return Observable.listEmployees;
+  // }
   getEmployee(id: number): Employee {
     return this.listEmployees.find(e => e.id === id);
  }

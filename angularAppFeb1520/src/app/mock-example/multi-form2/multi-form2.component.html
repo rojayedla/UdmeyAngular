@@ -1,0 +1,38 @@
+<p>
+  multi-form2 works!
+</p>
+<div class="mat-typography">
+  <h1>Checkout Order</h1>
+
+  <div class="checkout-form">
+    <form novalidate [formGroup]="checkoutForm" (ngSubmit)="formInitialized(checkoutForm.value)">
+       <div>
+        <input type="text" placeholder='Full name' formControlName="fullName">
+      </div>
+      <div>
+        <h3>Billing</h3>
+        <app-building-form (formReady)="formInitialized('billing', $event)"></app-building-form>
+      </div>
+      <div>
+        <h3>Shipping</h3>
+        <app-shipping-form  (formReady)="formInitialized('shipping', $event)"></app-shipping-form>
+      </div>
+
+      <!-- <mat-tab-group>
+        <mat-tab label="Billing" style="background:yellow">
+          <billing-form (formReady)="formInitialized('billing', $event)"></billing-form>
+        </mat-tab>
+        <mat-tab label="Shipping">
+          <shipping-form (formReady)="formInitialized('shipping', $event)"></shipping-form>
+        </mat-tab>
+      </mat-tab-group> -->
+      <button type="submit">Submit form</button>
+    </form>
+
+  </div>
+
+<h2 class='mat-h2'>Form Value</h2>
+  <!-- <pre>
+    {{checkoutForm.value | json}}
+  </pre> -->
+</div>
